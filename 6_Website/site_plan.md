@@ -1,0 +1,1 @@
+Structure for the future landing page.
