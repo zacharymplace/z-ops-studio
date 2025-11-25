@@ -50,6 +50,68 @@ tbody, tfoot, thead, tr, th, td {
   }
 }
 
+/* -------------------------------------------------------------
+   HERO SECTION
+-------------------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 4rem;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.hero h2 {
+  font-size: 1.45rem;
+  font-weight: 500;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtext {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0.75rem auto 2rem;
+  line-height: 1.55;
+}
+
+.hero-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  border-radius: 8px;
+}
+
+/* Optional underline accent for the main title */
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0.9rem auto 0;
+  border-radius: 2px;
+}
+
+/* Responsive scaling */
+@media (max-width: 650px) {
+  .hero {
+    padding-top: 4rem;
+  }
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero h2 {
+    font-size: 1.25rem;
+  }
+}
+
 
 /* -------------------------
    2. BASE LAYOUT

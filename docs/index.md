@@ -2,6 +2,15 @@
 layout: default
 ---
 
+<section class="hero">
+  <h1>Z$ Ops Studio</h1>
+  <h2>Systems. Automation. Creative Infrastructure.</h2>
+  <p class="hero-subtext">
+    Clear, structured, high-performance workflows for modern Finance, Operations, and Creative teams.
+  </p>
+  <a href="sections/portfolio.html" class="button hero-button">View Selected Work</a>
+</section>
+
 # Z$ Ops Studio  
 ### Systems. Automation. Creative Infrastructure.
 
