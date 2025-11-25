@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # Pricing & Service Menu  
 ### Clear, structured options for partnering with Z$ Ops Studio.

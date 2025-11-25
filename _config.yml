@@ -1,5 +1,5 @@
 title: Z$ Ops Studio
-theme: jekyll-theme-cayman
+theme: null
 markdown: kramdown
 highlighter: rouge
 exclude: [README.md]

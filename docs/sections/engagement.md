@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # Engagement Options  
 ### Clear structures for partnering with Z$ Ops Studio.

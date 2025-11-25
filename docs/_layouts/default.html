@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
+</head>
+
+<body>
+  {% include nav.html %}
+  <main style="padding-top: 80px; max-width: 900px; margin: 0 auto;">
+    {{ content }}
+  </main>
+</body>
+</html>

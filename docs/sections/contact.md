@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # Contact  
 ### Start a conversation with Z$ Ops Studio.

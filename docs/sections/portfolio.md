@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # Selected Work  
 ### Case studies demonstrating clarity, control, and operational excellence.

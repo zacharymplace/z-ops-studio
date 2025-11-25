@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # About Z$ Ops Studio  
 ### Systems built for clarity, speed, and operational confidence.

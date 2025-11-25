@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="/z-ops-studio/assets/css/custom.css">
-{% include nav.html %}
+---
+layout: default
+---
 
 # Automation Lab  
 ### High-leverage automations built for Finance, Systems, and Operations.
