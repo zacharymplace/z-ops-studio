@@ -209,6 +209,27 @@ section {
 }
 
 /* -------------------------------------------------------------
+   BODY DIMMER WHEN MOBILE MENU IS OPEN
+-------------------------------------------------------------- */
+
+body.nav-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.22); /* subtle global dim */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 900; /* sits BELOW the nav menu but ABOVE the page */
+}
+
+/* Dark mode version */
+@media (prefers-color-scheme: dark) {
+  body.nav-open::before {
+    background: rgba(0,0,0,0.45);
+  }
+}
+
+/* -------------------------------------------------------------
    BUTTON SYSTEM
 -------------------------------------------------------------- */
 
