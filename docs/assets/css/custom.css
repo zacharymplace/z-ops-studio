@@ -1,3 +1,91 @@
+/* RESET DEFAULT GITHUB PAGES STYLES */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  vertical-align: baseline;
+}
+
+/* Base Layout */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.55;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main Content Wrapper */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 1.5rem 4rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Text */
+p {
+  font-size: 17px;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+li {
+  margin: 0.35rem 0;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  margin: 2.5rem 0;
+}
+
+section {
+  margin: 2.5rem 0;
+  padding-bottom: 1rem;
+}
+
+section {
+  margin: 2.5rem 0;
+  padding-bottom: 1rem;
+}
+
+
 .site-nav {
   text-align: center;
   margin: 2rem 0;
