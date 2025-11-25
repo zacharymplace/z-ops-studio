@@ -1,0 +1,5 @@
+title: Z$ Ops Studio
+theme: jekyll-theme-cayman
+markdown: kramdown
+highlighter: rouge
+exclude: [README.md]
