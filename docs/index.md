@@ -3,12 +3,20 @@ layout: default
 ---
 
 <section class="hero">
-  <h1>Z$ Ops Studio</h1>
-  <h2>Systems. Automation. Creative Infrastructure.</h2>
-  <p class="hero-subtext">
-    Clear, structured, high-performance workflows for modern Finance, Operations, and Creative teams.
-  </p>
-  <a href="sections/portfolio.html" class="button hero-button">View Selected Work</a>
+  <div class="hero-accent"></div>
+
+  <div class="hero-content">
+    <h1 class="fade-in">Z$ Ops Studio</h1>
+    <h2 class="fade-in delay-1">Systems. Automation. Creative Infrastructure.</h2>
+
+    <p class="hero-subtext fade-in delay-2">
+      Clear, structured, high-performance workflows for modern Finance, Operations, and Creative teams.
+    </p>
+
+    <a href="sections/portfolio.html" class="button hero-button fade-in delay-3">
+      View Selected Work
+    </a>
+  </div>
 </section>
 
 # Z$ Ops Studio  
