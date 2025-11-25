@@ -24,3 +24,112 @@
   opacity: 1;
   text-decoration: underline;
 }
+
+/* ----- NAV CONTAINER ----- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.75rem 0;
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+/* Transparent at top */
+.navbar:not(.scrolled) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Solid background on scroll */
+.navbar.scrolled {
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ----- CONTENT WRAPPER ----- */
+.nav-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ----- BRAND ----- */
+.nav-logo a {
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+}
+
+/* ----- LINK LIST ----- */
+.nav-links a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* ----- MOBILE HAMBURGER ----- */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* ----- MOBILE DROPDOWN MENU ----- */
+@media (max-width: 750px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background: var(--bg-color);
+    width: 180px;
+    padding: 1rem;
+    border-left: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 0.75rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ----- LIGHT/DARK MODE VARIABLES ----- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e1e20;
+  --border-color: rgba(0,0,0,0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1e1e20;
+    --text-color: #f1f1f1;
+    --border-color: rgba(255,255,255,0.15);
+  }
+
+  .navbar:not(.scrolled) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
