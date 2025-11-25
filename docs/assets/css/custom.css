@@ -1,4 +1,20 @@
-/* RESET DEFAULT GITHUB PAGES STYLES */
+/* -------------------------------------------------------------
+   Z$ OPS STUDIO — FULL POLISHED CSS
+   Covers:
+   - Reset
+   - Layout system
+   - Typography
+   - Navigation (sticky, transparent, fade-in)
+   - Mobile hamburger
+   - Spacing
+   - Buttons
+   - Dark/Light mode
+   - Tables + images
+-------------------------------------------------------------- */
+
+/* -------------------------
+   0. RESET DEFAULT STYLES
+-------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,7 +30,30 @@ tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 
-/* Base Layout */
+
+/* -------------------------
+   1. DARK/LIGHT MODE
+-------------------------- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1e1e20;
+  --border-color: rgba(0,0,0,0.15);
+  --accent-color: #00C2A8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111315;
+    --text-color: #f1f1f1;
+    --border-color: rgba(255,255,255,0.15);
+    --accent-color: #00C2A8;
+  }
+}
+
+
+/* -------------------------
+   2. BASE LAYOUT
+-------------------------- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", Arial, sans-serif;
   background: var(--bg-color);
@@ -24,118 +63,155 @@ body {
   margin: 0;
 }
 
-/* Main Content Wrapper */
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 120px 1.5rem 4rem;
 }
 
-/* Headings */
+
+/* -------------------------
+   3. TYPOGRAPHY
+-------------------------- */
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
+  margin: 2.5rem 0 1rem;
 }
 
 h3 {
-  font-size: 1.35rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
 }
 
-/* Text */
 p {
   font-size: 17px;
   margin-bottom: 1rem;
 }
 
-/* Lists */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
+/* -------------------------
+   4. LISTS
+-------------------------- */
 ul {
   margin-left: 1.25rem;
   margin-bottom: 1rem;
 }
+
 li {
   margin: 0.35rem 0;
 }
 
-/* Divider */
+
+/* -------------------------
+   5. DIVIDERS
+-------------------------- */
 hr {
   border: none;
   border-bottom: 1px solid var(--border-color);
   margin: 2.5rem 0;
 }
 
+
+/* -------------------------
+   6. SECTIONS
+-------------------------- */
 section {
   margin: 2.5rem 0;
   padding-bottom: 1rem;
-}
-
-section {
-  margin: 2.5rem 0;
-  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 
-.site-nav {
-  text-align: center;
-  margin: 2rem 0;
+/* -------------------------
+   7. TABLES
+-------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
 }
 
-.site-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 0.75rem;
+  font-size: 15px;
 }
 
-.site-nav li {
+
+/* -------------------------
+   8. IMAGES
+-------------------------- */
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+
+/* -------------------------
+   9. BUTTONS
+-------------------------- */
+.button {
   display: inline-block;
-  margin: 0 0.75rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--accent-color);
+  color: white;
+  margin: 1rem 0;
+  transition: opacity 0.2s;
 }
 
-.site-nav a {
-  text-decoration: none;
-  font-weight: 500;
+.button:hover {
   opacity: 0.85;
 }
 
-.site-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
 
-/* ----- NAV CONTAINER ----- */
+/* -------------------------
+   10. NAVIGATION (Sticky + Scroll Fade + Mobile)
+-------------------------- */
+
+/* NAVBAR WRAPPER */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 0.75rem 0;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 999;
+  z-index: 9999;
 }
 
-/* Transparent at top */
+/* Transparent initial state */
 .navbar:not(.scrolled) {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0);
 }
 
-/* Solid background on scroll */
+/* Solid background when scrolled */
 .navbar.scrolled {
   background-color: var(--bg-color);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ----- CONTENT WRAPPER ----- */
+/* NAV CONTENT */
 .nav-content {
   max-width: 1100px;
   margin: 0 auto;
@@ -145,18 +221,16 @@ section {
   align-items: center;
 }
 
-/* ----- BRAND ----- */
+/* BRAND TEXT */
 .nav-logo a {
   font-weight: 700;
-  text-decoration: none;
   letter-spacing: 0.5px;
   color: var(--text-color);
 }
 
-/* ----- LINK LIST ----- */
+/* DESKTOP LINKS */
 .nav-links a {
   margin: 0 0.75rem;
-  text-decoration: none;
   font-weight: 500;
   color: var(--text-color);
   opacity: 0.85;
@@ -167,25 +241,25 @@ section {
   opacity: 1;
 }
 
-/* ----- MOBILE HAMBURGER ----- */
+/* HAMBURGER ICON */
 .hamburger {
-  display: none;
+  display: none; 
   font-size: 26px;
   cursor: pointer;
   color: var(--text-color);
 }
 
-/* ----- MOBILE DROPDOWN MENU ----- */
+/* MOBILE MENU */
 @media (max-width: 750px) {
   .nav-links {
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
-    display: none;
-    flex-direction: column;
     background: var(--bg-color);
-    width: 180px;
     padding: 1rem;
+    width: 200px;
     border-left: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }
@@ -201,68 +275,4 @@ section {
   .hamburger {
     display: block;
   }
-}
-
-/* ----- LIGHT/DARK MODE VARIABLES ----- */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #1e1e20;
-  --border-color: rgba(0,0,0,0.15);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #1e1e20;
-    --text-color: #f1f1f1;
-    --border-color: rgba(255,255,255,0.15);
-  }
-
-  .navbar:not(.scrolled) {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-}
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  line-height: 1.55;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-p, ul, li {
-  font-size: 17px;
-  line-height: 1.55;
-  margin-bottom: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-section {
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  background: var(--text-color);
-  color: var(--bg-color);
-  transition: opacity 0.2s;
-}
-
-.button:hover {
-  opacity: 0.85;
 }
