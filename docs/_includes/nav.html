@@ -1,10 +1,13 @@
 <nav class="navbar">
   <div class="nav-content">
+
+    <!-- LOGO -->
     <div class="nav-logo">
       <a href="/z-ops-studio/">Z$ OPS STUDIO</a>
     </div>
 
-    <div class="nav-links" id="navLinks">
+    <!-- DESKTOP NAV -->
+    <div class="nav-links">
       <a href="/z-ops-studio/">Home</a>
       <a href="/z-ops-studio/sections/services.html">Services</a>
       <a href="/z-ops-studio/sections/portfolio.html">Portfolio</a>
@@ -14,23 +17,8 @@
       <a href="/z-ops-studio/sections/contact.html">Contact</a>
     </div>
 
-    <div class="hamburger" onclick="toggleNav()">
-      &#9776;
-    </div>
+    <!-- MOBILE HAMBURGER -->
+    <div class="hamburger">☰</div>
+
   </div>
 </nav>
-
-<script>
-function toggleNav() {
-  document.getElementById("navLinks").classList.toggle("nav-open");
-}
-
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-  if (window.scrollY > 10) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-});
-</script>
