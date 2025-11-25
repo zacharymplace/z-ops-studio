@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # About Z$ Ops Studio  
 ### Systems built for clarity, speed, and operational confidence.
 

@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # Selected Work  
 ### Case studies demonstrating clarity, control, and operational excellence.
 

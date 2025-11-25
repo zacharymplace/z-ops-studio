@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # Automation Lab  
 ### High-leverage automations built for Finance, Systems, and Operations.
 

@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # What We Do  
 ### Systems, automation, and operational clarity—designed for modern teams.
 

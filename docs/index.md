@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # Z$ Ops Studio  
 ### Systems. Automation. Creative Infrastructure.
 

@@ -1,3 +1,5 @@
+{% include nav.html %}
+
 # Pricing & Service Menu  
 ### Clear, structured options for partnering with Z$ Ops Studio.
 
