@@ -14,5 +14,22 @@
 
   {% include footer.html %}
   
+<script>
+  const navbar = document.querySelector('.navbar');
+  const links = document.querySelector('.nav-links');
+  const burger = document.querySelector('.hamburger');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  burger.addEventListener('click', () => {
+    links.classList.toggle('open');
+  });
+</script>
 </body>
 </html>
